@@ -14,7 +14,11 @@
 package com.google.devtools.build.lib.bazel.rules.sh;
 
 import com.google.common.collect.ImmutableList;
+<<<<<<< HEAD
 import com.google.devtools.build.lib.actions.ActionAnalysisMetadata;
+=======
+import com.google.common.collect.ImmutableMap;
+>>>>>>> Replace virtual includes generated paths with their actual paths.
 import com.google.devtools.build.lib.actions.Artifact;
 import com.google.devtools.build.lib.actions.MutableActionGraph.ActionConflictException;
 import com.google.devtools.build.lib.analysis.AnalysisEnvironment;
@@ -103,7 +107,8 @@ public class ShBinary implements RuleConfiguredTargetFactory {
                 ruleContext,
                 new InstrumentationSpec(FileTypeSet.ANY_FILE, "srcs", "deps", "data"),
                 CC_METADATA_COLLECTOR,
-                filesToBuild))
+                filesToBuild,
+                ImmutableMap.of()))
         .build();
   }
 
